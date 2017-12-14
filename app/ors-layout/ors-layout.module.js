@@ -7,6 +7,11 @@
 			templateUrl: 'ors-layout/tmpl/ors-header.html' 
 		};
 	});
+	app.directive('orsFooter', function(){
+		return {
+			templateUrl: 'ors-layout/tmpl/ors-footer.html' 
+		};
+	});
 
 
 })();
