@@ -1,10 +1,7 @@
-(function () {
-	'use strict';
+const app = angular.module('main', ['ors-layout']);
 
-	var app = angular.module('main', ['ors-layout']);
+app.run(function ($rootScope) {
+	$rootScope.name = 'Christine';
+});
 
-	app.run(function ($rootScope) {
-		$rootScope.name  = 'Christine';
-	});
-
-})();
+console.log('this', this);
