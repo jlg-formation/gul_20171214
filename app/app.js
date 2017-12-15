@@ -1,3 +1,5 @@
+import './style.css';
+
 import './ors-layout/ors-layout.module.js';
 
 const app = angular.module('main', ['ors-layout']);

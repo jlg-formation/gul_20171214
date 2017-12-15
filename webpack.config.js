@@ -1,3 +1,4 @@
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
 const webpack = require('webpack');
 
@@ -17,11 +18,21 @@ module.exports = {
 			use: [{
 				loader: 'babel-loader',
 			}]
+		}, {
+			test: /\.css$/,
+			use: ExtractTextPlugin.extract({
+				fallback: 'style-loader',
+				use: 'css-loader?minimize&sourceMap'
+			})
 		}]
 	},
+
 	devtool: 'source-map',
 	plugins: [
 		new webpack.optimize.CommonsChunkPlugin('vendors'),
-		new webpack.optimize.UglifyJsPlugin()
+		new webpack.optimize.UglifyJsPlugin({
+			sourceMap: true
+		}),
+		new ExtractTextPlugin('[name].css')
 	]
 };
