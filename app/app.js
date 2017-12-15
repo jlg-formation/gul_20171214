@@ -1,4 +1,4 @@
-import './style.css';
+import './style.scss';
 
 import './ors-layout/ors-layout.module.js';
 
