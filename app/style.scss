@@ -1,5 +1,8 @@
-$color: blue;
+$color: green;
 
 body {
     background-color: $color;
+    h1 {
+        color: red;
+    }
 }
