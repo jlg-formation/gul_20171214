@@ -30,6 +30,14 @@ module.exports = {
 				fallback: 'style-loader',
 				use: 'css-loader?minimize&sourceMap!sass-loader?sourceMap'
 			})
+		}, {
+			test: /\.html$/,
+			use: [{
+				loader: 'html-loader',
+				options: {
+					minimize: true
+				}
+			}],
 		}]
 	},
 
